@@ -9,9 +9,9 @@ tap_install:
       kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
     supply_chain: testing_scanning
     ootb_supply_chain_testing_scanning:
-    registry:
-      server: gcr.io
-      repository: pa-dpatel/tap-wkld
+      registry:
+        server: gcr.io
+        repository: pa-dpatel/tap-wkld
     accelerator:
       ingress:
         include: true
