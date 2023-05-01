@@ -1,0 +1,10 @@
+aws secretsmanager create-secret \
+   --name dev/${EKS_CLUSTER_NAME}/tap/sensitive-values.yaml \
+   --secret-string "$(cat <<EOF
+---
+buildservice:
+  kp_default_repository_secret: 
+    name: buildservice-fetch-0 
+    namespace: tap-install
+EOF
+)"
