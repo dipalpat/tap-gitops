@@ -1,0 +1,46 @@
+tap_install:
+  values:
+    shared:
+      ingress_domain: tap.view-green.xploretanzu.com
+    ceip_policy_disclosed: true
+    profile: view
+    # buildservice:
+    #   #exclude_dependencies: true
+    #   kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
+    # supply_chain: testing_scanning
+    # ootb_supply_chain_testing_scanning:
+    #   registry:
+    #     server: gcr.io
+    #     repository: pa-dpatel/tap-wkld
+    accelerator:
+      ingress:
+        include: true
+        enable_tls: false
+    appliveview:
+      ingressEnabled: true
+    # appliveview_connector:
+    #   backend:
+    #     ingressEnabled: true
+    #     sslDeactivated: true
+    tap_gui:
+      service_type: ClusterIP
+      # metadataStoreAutoconfiguration: true
+      app_config:
+        catalog:
+          locations:
+          - type: url
+            target: https://github.com/dipalpat/git-catalog/blob/main/catalog-info.yaml
+        backend:
+          reading:
+            allow:
+            - host: github.com
+    # metadata_store:
+    #   ns_for_export_app_cert: '*'
+    #   app_service_type: ClusterIP
+    contour:
+      infrastructure_provider: aws
+      envoy:
+        service:
+          type: LoadBalancer
+    # namespace_provisioner:
+    #   controller: true
