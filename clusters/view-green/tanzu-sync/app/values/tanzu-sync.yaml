@@ -4,4 +4,4 @@ git:
   ref: origin/main
   sub_path: clusters/view-green/cluster-config
 tap_package_repository:
-  oci_repository: gcr.io/pa-dpatel/tap150:1.5.0
+  oci_repository: gcr.io/pa-dpatel/tap150
