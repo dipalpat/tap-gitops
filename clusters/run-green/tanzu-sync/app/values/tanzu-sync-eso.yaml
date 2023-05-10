@@ -1,0 +1,18 @@
+---
+secrets:
+  eso:
+    aws:
+      region: us-east-2
+      tanzu_sync_secrets:
+        role_arn: arn:aws:iam::795323290475:role/run-green--tanzu-sync-secrets
+    remote_refs:
+      sync_git_ssh:
+        ssh_private_key:
+          key: dev/run-green/tanzu-sync/sync-git-ssh
+          property: ssh-privatekey
+        ssh_known_hosts:
+          key: dev/run-green/tanzu-sync/sync-git-ssh
+          property: ssh-knownhosts
+      install_registry_dockerconfig:
+        dockerconfigjson:
+          key: dev/run-green/tanzu-sync/install-registry-dockerconfig

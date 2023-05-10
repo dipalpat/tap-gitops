@@ -1,0 +1,20 @@
+tap_install:
+  values:
+    shared:
+      ingress_domain: tap.run-green.xploretanzu.com
+    
+    ceip_policy_disclosed: true
+    profile: run
+
+    # supply_chain: testing_scanning
+    appliveview_connector:
+      backend:
+        ingressEnabled: true
+        sslDeactivated: true
+        host: appliveview.tap.view-green.xploretanzu.com
+
+    contour:
+      infrastructure_provider: aws
+      envoy:
+        service:
+          type: LoadBalancer

@@ -1,0 +1,12 @@
+---
+tap_install:
+  secrets:
+    eso:
+      aws:
+        region: us-east-2
+        tap_install_secrets:
+          role_arn: arn:aws:iam::795323290475:role/run-green--tap-install-secrets
+      remote_refs:
+        tap_sensitive_values:
+          sensitive_tap_values_yaml:
+            key: dev/run-green/tap/sensitive-values.yaml
