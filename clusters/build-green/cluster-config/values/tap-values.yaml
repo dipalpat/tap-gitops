@@ -11,7 +11,7 @@ tap_install:
   
     buildservice:
       kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
-      kp_default_repository_username: _json_key
+      # kp_default_repository_username: _json_key
 
     supply_chain: testing_scanning
   
