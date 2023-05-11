@@ -1,0 +1,42 @@
+tap_install:
+  values:
+
+    shared:
+      ingress_domain: tap.build-green.xploretanzu.com
+      image_registry:
+        project_path: gcr.io/pa-dpatel/tap15-37
+  
+    ceip_policy_disclosed: true
+    profile: full
+  
+    buildservice:
+      kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
+      kp_default_repository_username: _json_key
+
+    supply_chain: testing_scanning
+  
+    ootb_supply_chain_testing_scanning:
+      registry:
+        server: gcr.io
+        repository: pa-dpatel/tap-wkld
+      gitops:
+        ssh_secret: ""
+
+    grype:
+      #namespace:  "*"
+      # targetImagePullSecret: "TARGET-REGISTRY-CREDENTIALS-SECRET"
+      metadataStore:
+        url: "https://metadata-store.tap.view-green.xploretanzu.com"
+        caSecret:
+            name: store-ca-cert
+            importFromNamespace: metadata-store-secrets
+        authSecret:
+            name: store-auth-token
+            importFromNamespace: metadata-store-secrets
+    
+    scanning:
+      metadataStore:
+        url: ""
+
+    tap_telemetry:
+      installed_for_vmware_internal_use: "true"
