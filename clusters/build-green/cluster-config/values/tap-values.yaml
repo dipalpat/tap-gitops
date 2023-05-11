@@ -3,8 +3,8 @@ tap_install:
 
     shared:
       ingress_domain: tap.build-green.xploretanzu.com
-      image_registry:
-        project_path: gcr.io/pa-dpatel/tap15-37
+      # image_registry:
+      #   project_path: gcr.io/pa-dpatel/tap15-37
   
     ceip_policy_disclosed: true
     profile: full
