@@ -8,3 +8,18 @@ buildservice:
     namespace: tap-install
 EOF
 )"
+
+aws secretsmanager create-secret \
+   --name dev/${EKS_CLUSTER_NAME}/tap/sensitive-values.yaml \
+   --secret-string "$(cat <<EOF
+---
+shared:
+  image_registry:
+    username: _json_key
+    password: "$(cat /Users/pdipal/Downloads/pa-dpatel-689de39b13dd.json  | tr -d '\n')"
+buildservice:
+  kp_default_repository_password: "$(cat /Users/pdipal/Downloads/pa-dpatel-689de39b13dd.json  | tr -d '\n')"
+EOF
+)"
+
+aws secretsmanager delete-secret --secret-id dev/build-green/tap/sensitive-values.yaml --force-delete-without-recovery --region us-east-2
