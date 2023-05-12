@@ -30,6 +30,17 @@ tap_install:
             type: 'multiTenant'
           clusterLocatorMethods:
             - type: 'config'
+              clusters:
+              ## build-green
+                - name: build-green
+                  authProvider: serviceAccount                  
+                  skipTLSVerify: true
+                  skipMetricsLookup: true
+              ## run-green
+                - name: run-green
+                  authProvider: serviceAccount            
+                  skipTLSVerify: true
+                  skipMetricsLookup: true
 
     contour:
       infrastructure_provider: aws
