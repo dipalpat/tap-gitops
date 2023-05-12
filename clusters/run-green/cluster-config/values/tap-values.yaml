@@ -7,7 +7,7 @@ tap_install:
     profile: run
 
     supply_chain: basic
-    
+
     appliveview_connector:
       backend:
         ingressEnabled: true
@@ -19,3 +19,6 @@ tap_install:
       envoy:
         service:
           type: LoadBalancer
+
+    namespace_provisioner:
+      controller: true

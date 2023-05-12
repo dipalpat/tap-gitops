@@ -38,5 +38,8 @@ tap_install:
       metadataStore:
         url: ""
 
+    namespace_provisioner:
+      controller: true
+
     tap_telemetry:
       installed_for_vmware_internal_use: "true"
