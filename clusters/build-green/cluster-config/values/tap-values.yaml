@@ -23,7 +23,7 @@ tap_install:
         ssh_secret: ""
 
     grype:
-      #namespace:  "*"
+      namespace:  "dev-space"
       # targetImagePullSecret: "TARGET-REGISTRY-CREDENTIALS-SECRET"
       metadataStore:
         url: "https://metadata-store.tap.view-green.xploretanzu.com"
