@@ -1,7 +1,7 @@
 tap_install:
   values:
     shared:
-      ingress_domain: tap.run-green.xploretanzu.com
+      ingress_domain: tap.run-yellow.xploretanzu.com
     
     ceip_policy_disclosed: true
     profile: run
