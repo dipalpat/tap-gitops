@@ -3,3 +3,4 @@ clusters/iterate-green/.envrc
 tmp
 view-green/
 view-green-bkp/
+git-secret.yaml
