@@ -11,7 +11,7 @@ tap_install:
     appliveview_connector:
       backend:
         ingressEnabled: true
-        sslDeactivated: false
+        sslDeactivated: true
         host: appliveview.tap.view-green.xploretanzu.com
 
     contour:
