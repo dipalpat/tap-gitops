@@ -26,3 +26,4 @@ tap_install:
     api_auto_registration: 
       tap_gui_url: https://tap-gui.tap.view-green.xploretanzu.com
       cluster_name: run-green
+      auto_generate_cert: false
