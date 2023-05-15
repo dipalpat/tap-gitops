@@ -12,7 +12,7 @@ tap_install:
       backend:
         ingressEnabled: true
         sslDeactivated: false
-        host: appliveview.tap.view-green.xploretanzu.com
+        host: appliveview.tap.run-yellow.xploretanzu.com
 
     contour:
       infrastructure_provider: aws
