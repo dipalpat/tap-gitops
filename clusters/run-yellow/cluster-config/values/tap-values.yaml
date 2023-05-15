@@ -23,6 +23,6 @@ tap_install:
     namespace_provisioner:
       controller: true
 
-    api: 
-      tap_gui_url: https://tap-gui.tap.view-green.xploretanzu.com
-      cluster_name: run-green
+    # api: 
+    #   tap_gui_url: https://tap-gui.tap.view-green.xploretanzu.com
+    #   cluster_name: run-green
