@@ -10,8 +10,9 @@ tap_install:
     profile: build
   
     buildservice:
-      kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
+      kp_default_repository: gcr.io/pa-dpatel/tbs1-10-8/tbs-full-deps
       # kp_default_repository_username: _json_key
+      exclude_dependencies: true
 
     supply_chain: testing_scanning
   
