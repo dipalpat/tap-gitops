@@ -50,7 +50,11 @@ tap_install:
         url: ""
 
     namespace_provisioner:
-      controller: true
+        controller: false
+        gitops_install:
+          ref: origin/main
+          subPath: gitops-install
+          url: https://github.com/dipalpat/tap-dev-ns-setup.git
 
     tap_telemetry:
       installed_for_vmware_internal_use: "true"
