@@ -11,8 +11,28 @@ tap_install:
     appliveview_connector:
       backend:
         ingressEnabled: true
-        sslDeactivated: true
+        sslDeactivated: false
         host: appliveview.tap.view-green.xploretanzu.com
+        caCertData:  |                                                         
+          -----BEGIN CERTIFICATE-----
+          MIIDHjCCAgagAwIBAgIQDrmW1wg7cT9nWsfa7EahZDANBgkqhkiG9w0BAQsFADAp
+          MScwJQYDVQQDEx50YXAtaW5ncmVzcy1zZWxmc2lnbmVkLXJvb3QtY2EwHhcNMjMw
+          NTEyMTMxMTQzWhcNMjMwODEwMTMxMTQzWjApMScwJQYDVQQDEx50YXAtaW5ncmVz
+          cy1zZWxmc2lnbmVkLXJvb3QtY2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+          AoIBAQCYD2Bc2pWEUKH9tGyb/r8fj8eqsv3CRo493C0LKfNt1H2AAgYBSECvsJir
+          eRd4HiCStnTRd7ZwZFQQ/Wr2uW53epA+u9cpUOyrJNo1O76iyZ4d9A/gVA7HkeKd
+          S40xGETiASlWrxsA53NavnaWyW/gZyDSLoXAdSiRoNGXLQSMBjszbGE9hiJeK5Rn
+          sggjAQGK2YQWxfLx3pDpw20euRGXn/tcDW6iwUwXZZuTb6VWVFxvCyCZskL30cM7
+          YifeVpXgvaFfiIeC2fXCVaXL50A4ifPBIIi2QiwryEBXvUCXa53Ma5G4weJ1OrCc
+          YaWlfuLIn9gHCK5OY3yLnBwqQshtAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAP
+          BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQxHM2txE3bugXlPv+wQ7rMcVzikzAN
+          BgkqhkiG9w0BAQsFAAOCAQEAdJrmZuGqVqdDIVjhiOn/zoPMOl2MzD8bfZjKJZvF
+          ZC9CI6GkZr5F1TZ2OuRd7snvx7oBoVA8mnZc3AfTVEsYyHpOCYeHScsxkOWHHy6z
+          y4FZ5oJ4Wu33D2JqEK0edFDI0zAox8sy0fIAH87vWGrqaj4RA5w3vrXK/XaVOsFW
+          dFZUEvNEK/dcScDl8xxREvayfO64FeGFXSPlrm5wuCH91mAnmvZocSOEo+SN+fDp
+          Xw9IsT1AV9X19X2ml1R5WzdoaF2AdzGdl9666O08c6fwQlvthwmAzbNFvstlY0UJ
+          IaSWXAOq3WoyADZbkyXfYnZXC0LjvYHrHUPDT/jc1xV3fQ==                
+          -----END CERTIFICATE-----
 
     contour:
       infrastructure_provider: aws
