@@ -21,7 +21,8 @@ tap_install:
     appliveview_connector:
       backend:
         ingressEnabled: true
-        sslDeactivated: true
+        sslDeactivated: false
+    
     tap_gui:
       service_type: ClusterIP
       metadataStoreAutoconfiguration: true
@@ -34,14 +35,17 @@ tap_install:
           reading:
             allow:
             - host: github.com
+    
     metadata_store:
       ns_for_export_app_cert: '*'
       app_service_type: ClusterIP
+      
     contour:
       infrastructure_provider: aws
       envoy:
         service:
           type: LoadBalancer
+
     namespace_provisioner:
       controller: false
       gitops_install:
