@@ -1,12 +1,12 @@
 tap_install:
   values:
     shared:
-      ingress_domain: tap.xploretanzu.com
+      ingress_domain: tap.iterate-green.xploretanzu.com
     ceip_policy_disclosed: true
-    profile: full
+    profile: iterate
     buildservice:
-      #exclude_dependencies: true
-      kp_default_repository: gcr.io/pa-dpatel/tap15-37/buildservice
+      exclude_dependencies: true
+      kp_default_repository: gcr.io/pa-dpatel/tbs1-10-8/tbs-full-deps
     supply_chain: testing_scanning
     ootb_supply_chain_testing_scanning:
       registry:
@@ -43,4 +43,8 @@ tap_install:
         service:
           type: LoadBalancer
     namespace_provisioner:
-      controller: true
+      controller: false
+      gitops_install:
+          ref: origin/main
+          subPath: gitops-install
+          url: https://github.com/dipalpat/tap-dev-ns-setup.git
