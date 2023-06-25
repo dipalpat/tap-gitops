@@ -24,7 +24,7 @@ tap_install:
         ssh_secret: ""
         server_address: https://github.com/
         repository_owner: dipalpat
-        #repository_name: cartographer
+        repository_name: tap-workloads
         branch: main
         commit_strategy: pull_request
         pull_request:
