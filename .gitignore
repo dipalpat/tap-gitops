@@ -4,3 +4,4 @@ tmp
 view-green/
 view-green-bkp/
 git-secret.yaml
+clusters/build-green/store_ca.yaml
