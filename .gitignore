@@ -1,7 +1,6 @@
-clusters/iterate-green/.envrc
+
 .vscode/settings.json
-tmp
 view-green/
-view-green-bkp/
 git-secret.yaml
 clusters/build-green/store_ca.yaml
+deliverable.yaml

@@ -1,0 +1,15 @@
+
+tanzu apps workload apply tanzu-java-web-app \
+--git-repo https://github.com/sample-accelerators/tanzu-java-web-app \
+--git-branch main \
+--type web \
+--app tanzu-java-web-app \
+--label apps.tanzu.vmware.com/has-tests="true" \
+--param-yaml testing_pipeline_matching_labels='{"apps.tanzu.vmware.com/language": "java"}' \
+--param scanning_source_policy="lax-scan-policy" \
+--param scanning_image_policy="lax-scan-policy" \
+--namespace dev-space \
+--tail \
+--yes
+
+kubectl get configmap tanzu-java-web-app-deliverable -n dev-space -o go-template='{{.data.deliverable}}' > deliverable.yaml         
