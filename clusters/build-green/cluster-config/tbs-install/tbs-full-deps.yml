@@ -1,3 +1,18 @@
+#@ load("@ytt:data", "data")
+---
+#@ if data.values.tbs_full_dependencies.enabled:
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: tbs-full-deps-repository
+  namespace: tap-install
+  annotations:
+    kapp.k14s.io/change-group: pkgr
+spec:
+  fetch:
+    imgpkgBundle:
+      image: gcr.io/pa-dpatel/tbs1-10-8/tbs-full-deps:1.10.8
+---
 apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
@@ -13,3 +28,4 @@ spec:
     refName: full-tbs-deps.tanzu.vmware.com
     versionSelection:
       constraints: "1.10.8"
+#@ end
