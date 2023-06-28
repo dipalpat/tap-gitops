@@ -73,3 +73,4 @@ tap_install:
 
     cnrs: 
       domain_name: tap.run-yellow.xploretanzu.com
+      domain_template: "{{.Name}}-{{.Namespace}}.{{.Domain}}"
