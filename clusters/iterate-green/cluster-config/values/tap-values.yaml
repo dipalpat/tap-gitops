@@ -8,9 +8,9 @@ tap_install:
       exclude_dependencies: true
       kp_default_repository: gcr.io/pa-dpatel/tbs1-10-8/tbs-full-deps
     
-    supply_chain: testing_scanning
+    supply_chain: basic
   
-    ootb_supply_chain_testing_scanning:
+    ootb_supply_chain_basic:
       registry:
         server: gcr.io
         repository: pa-dpatel/tap-wkld
