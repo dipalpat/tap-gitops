@@ -20,11 +20,60 @@ tap_install:
         enable_tls: false
     appliveview:
       ingressEnabled: true
+
+    
     appliveview_connector:
       backend:
         ingressEnabled: true
         sslDeactivated: false
-    
+        host: appliveview.tap.view-green.xploretanzu.com
+        caCertData:  |                                                         
+          -----BEGIN CERTIFICATE-----
+          MIIDHzCCAgegAwIBAgIRAJLFHUg52LA08zUkthQz0uMwDQYJKoZIhvcNAQELBQAw
+          KTEnMCUGA1UEAxMedGFwLWluZ3Jlc3Mtc2VsZnNpZ25lZC1yb290LWNhMB4XDTIz
+          MDYyMzIwMDMxMVoXDTIzMDkyMTIwMDMxMVowKTEnMCUGA1UEAxMedGFwLWluZ3Jl
+          c3Mtc2VsZnNpZ25lZC1yb290LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+          CgKCAQEAuWyNu5n1R71TS4W5X8YMbI6Xo8AiSoCEBN33U0zk9hdbZo+CswetJlTB
+          N0TfaZ/LwKDiJzA9gT34e7tseyGH/T3JHMVCYNaL+bsImt/azbo29beiJFed9yk0
+          AD2FyeLiD/fiYB9Y9kTsN20X5yMs+jlfXItJtxuAT9Ahn9iVfr7ZAZPfB1vxspNB
+          +kPbOQr1djkkwUEpnfvXk9R/spuKnuSYYSdSjJf4z8oZ80LN+7466+Ry4t6erwRu
+          28ZS6x3plN0t8cnwWAasvWqon1ZdGeqmJn7d1heTPyXl9EfKuLOHdVp/4T5kMqc1
+          w7m7OSQ9wZPxbVLp6qs2EvRSQ2ZmLwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQw
+          DwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUFpK1NhdUG7s9mDBPWhBOlTXC3zcw
+          DQYJKoZIhvcNAQELBQADggEBAGIow+H4D3ycQyFXTu99NAGaIegOq6LIGPKFO+sX
+          sx99E9C/5k/lqd4oeK7fEpbVe/ymSIDM1Z/SSgslYw/4687d0Ha1pqQh3erA+Sak
+          0x2ozUu3Han66peXO2yDd9OkVK7VL49yzMPUQVMc24ige6wyTeEzHwqlwTH+F5LH
+          4+Ar1JwurTBHB6LI2WQ5v3jkOwyxm8i4sUJgRTrxc0OXZVZ43gmK7xg8HezBdsVw
+          zdxaYb89nTPngjU2lvbAls2zqcWjPVI13RgvJUdcMqcL0nM+4QRshj6bg8oZW9WN
+          hu0WsEA5RcZEQU7o7M/cKJIsXueS2rZTjY0Gwk+XOTcSLnQ=
+          -----END CERTIFICATE-----
+
+
+    api_auto_registration: 
+      tap_gui_url: https://tap-gui.tap.view-green.xploretanzu.com
+      cluster_name: iterate-green
+      ca_cert_data:   |                                                         
+        -----BEGIN CERTIFICATE-----
+        MIIDHzCCAgegAwIBAgIRAJLFHUg52LA08zUkthQz0uMwDQYJKoZIhvcNAQELBQAw
+        KTEnMCUGA1UEAxMedGFwLWluZ3Jlc3Mtc2VsZnNpZ25lZC1yb290LWNhMB4XDTIz
+        MDYyMzIwMDMxMVoXDTIzMDkyMTIwMDMxMVowKTEnMCUGA1UEAxMedGFwLWluZ3Jl
+        c3Mtc2VsZnNpZ25lZC1yb290LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+        CgKCAQEAuWyNu5n1R71TS4W5X8YMbI6Xo8AiSoCEBN33U0zk9hdbZo+CswetJlTB
+        N0TfaZ/LwKDiJzA9gT34e7tseyGH/T3JHMVCYNaL+bsImt/azbo29beiJFed9yk0
+        AD2FyeLiD/fiYB9Y9kTsN20X5yMs+jlfXItJtxuAT9Ahn9iVfr7ZAZPfB1vxspNB
+        +kPbOQr1djkkwUEpnfvXk9R/spuKnuSYYSdSjJf4z8oZ80LN+7466+Ry4t6erwRu
+        28ZS6x3plN0t8cnwWAasvWqon1ZdGeqmJn7d1heTPyXl9EfKuLOHdVp/4T5kMqc1
+        w7m7OSQ9wZPxbVLp6qs2EvRSQ2ZmLwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQw
+        DwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUFpK1NhdUG7s9mDBPWhBOlTXC3zcw
+        DQYJKoZIhvcNAQELBQADggEBAGIow+H4D3ycQyFXTu99NAGaIegOq6LIGPKFO+sX
+        sx99E9C/5k/lqd4oeK7fEpbVe/ymSIDM1Z/SSgslYw/4687d0Ha1pqQh3erA+Sak
+        0x2ozUu3Han66peXO2yDd9OkVK7VL49yzMPUQVMc24ige6wyTeEzHwqlwTH+F5LH
+        4+Ar1JwurTBHB6LI2WQ5v3jkOwyxm8i4sUJgRTrxc0OXZVZ43gmK7xg8HezBdsVw
+        zdxaYb89nTPngjU2lvbAls2zqcWjPVI13RgvJUdcMqcL0nM+4QRshj6bg8oZW9WN
+        hu0WsEA5RcZEQU7o7M/cKJIsXueS2rZTjY0Gwk+XOTcSLnQ=
+        -----END CERTIFICATE-----
+
+
     tap_gui:
       service_type: ClusterIP
       metadataStoreAutoconfiguration: true
