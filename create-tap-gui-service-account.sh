@@ -1,5 +1,5 @@
 
-for i in "eks.dpatel-cloudgate-aws-credentials.us-east-2.build-green" "eks.dpatel-cloudgate-aws-credentials.us-east-2.run-green" "eks.dpatel-cloudgate-aws-credentials.us-east-2.run-yellow";
+for i in "eks.dpatel-cloudgate-aws-credentials.us-east-2.iterate-green" "eks.dpatel-cloudgate-aws-credentials.us-east-2.build-green" "eks.dpatel-cloudgate-aws-credentials.us-east-2.run-green" "eks.dpatel-cloudgate-aws-credentials.us-east-2.run-yellow";
 do
     kubectx $i
     kubectl apply -f ./tap-gui-viewer-service-account-rbac.yaml
