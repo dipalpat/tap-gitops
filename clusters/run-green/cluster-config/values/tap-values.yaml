@@ -70,3 +70,8 @@ tap_install:
         zdxaYb89nTPngjU2lvbAls2zqcWjPVI13RgvJUdcMqcL0nM+4QRshj6bg8oZW9WN
         hu0WsEA5RcZEQU7o7M/cKJIsXueS2rZTjY0Gwk+XOTcSLnQ=
         -----END CERTIFICATE-----
+
+    cnrs: 
+      domain_name: tap.run-green.xploretanzu.com
+      domain_template: "{{.Name}}-{{.Namespace}}.{{.Domain}}"
+
