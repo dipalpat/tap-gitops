@@ -71,3 +71,5 @@ tap_install:
         hu0WsEA5RcZEQU7o7M/cKJIsXueS2rZTjY0Gwk+XOTcSLnQ=
         -----END CERTIFICATE-----
 
+    cnrs: 
+      domain_name: tap.run-yellow.xploretanzu.com
