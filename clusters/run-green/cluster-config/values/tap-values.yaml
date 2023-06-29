@@ -9,6 +9,7 @@ tap_install:
     supply_chain: basic
 
     appliveview_connector:
+      activateSensitiveOperations: true
       backend:
         ingressEnabled: true
         sslDeactivated: false

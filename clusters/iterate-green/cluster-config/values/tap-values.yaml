@@ -23,6 +23,7 @@ tap_install:
 
     
     appliveview_connector:
+      activateSensitiveOperations: true
       backend:
         ingressEnabled: true
         sslDeactivated: false
